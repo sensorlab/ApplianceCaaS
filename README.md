@@ -1,1 +1,3 @@
 # ApplianceCaaS
+
+This is a containerised classification service using a machine learning model trained on the UK-DALE NILM dataset (sklearn classifier saved in pickle format as nilm_classifier.pkl). The service takes a 2D python list of shape (n, 600) in json format, where n is the number of samples and 600 is the length of each sample on tcp port 2524 and returns a 1D python list of length n with the predictions, in json format. The model is trained to classify 9 different appliance signals in disaggregated form, and returns a number from 0 to 8 corresponding to each appliance in the following order: computer monitor, laptop computer, television, washer dryer, microwave, boiler, toaster, kettle, fridge.
